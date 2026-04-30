@@ -77,7 +77,7 @@ public class ReportKafkaConsumer {
 
     } catch (Exception e) {
       log.warn(
-          "No se pudo parsear el payload como JSON para extraer productos. Payload: {}", payload);
+          "No se pudo parsear el payload como JSON para extraer productos: {}", e.getMessage());
     }
     return products;
   }
